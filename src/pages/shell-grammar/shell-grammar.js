@@ -1,9 +1,9 @@
-// script.js
+// shell-grammar.js
 
-var markdownURL = '../markdown/shell-scripts.md';
+var markdownFile = 'shell-grammar.md';
 
 // 获取Markdown文件内容
-fetch(markdownURL)
+fetch(markdownFile)
   .then(response => response.text())
   .then(markdownContent => {
     // 将Markdown转换为HTML

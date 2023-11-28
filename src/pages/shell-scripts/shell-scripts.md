@@ -4,7 +4,7 @@
 
 ----
 
-1. 使用echo命令输出以下内容：
+1. 使用`echo`命令输出以下内容：
    + Hello world
    + Hello
 
@@ -14,6 +14,8 @@
 
    **Answer:**
     ```shell
+    #!/bin/bash
+
     echo "Hello world"
 
     echo "Hello\nworld"
@@ -26,13 +28,15 @@
 ----
 
 2. shell变量：
-   + 创建变量name，赋值为自己姓名字母缩写。
-   + 显示变量name的值。
+   + 创建变量`name`，赋值为自己姓名字母缩写。
+   + 显示变量`name`的值。
    + 修改shell变量提示符使之显示命令序号。
-   + 为rm -i创建别名del。
+   + 为`rm -i`创建别名`del`。
 
    **Answer:**
    ```shell
+   #!/bin/bash
+
    name=ljz
 
    echo $name
@@ -53,18 +57,52 @@
 
      Current Date & Time: xxx
 
+   **Answer**
+   ```shell
+   #!/bin/bash
+
+   vi .profile
+
+   # ~/.profile
+   some commands...
+   echo "Hello $USER"
+   echo "Current Date & Time: $(date)"
+   ~
+   ~
+   ```
+
 ----
 
 4. 进程管理：
-   + 创建后台进程vi numbers，查看其ID。
+   + 创建后台进程`vi numbers`，查看其ID。
    + 终止该后台进程。
 
+   **Answer:**
+   ```shell
+   #!/bin/bash
+
+   vi numbers &
+   ps
+   ```
 
 ----
 
 5. 创建一个shell脚本sum，要求如下：
-   + 使用方法是$ sum a b，其中a、b是两个整数，且a < b；
+   + 使用方法是`$ sum a b`，其中a、b是两个整数，且a < b；
    + 功能是计算a到b的累加和；
-   + 终端输出 a+...+b=累加和
-   + 例如：sum 3 5 输出 3+...+5=12
+   + 终端输出 `a+...+b=累加和`
+   + 例如：`sum 3 5` 输出 `3+...+5=12`
 
+   **Answer:**
+   ```shell
+   #!/bin/bash
+
+   s=0
+
+   for((i=$1;i<=$2;i++))
+   do
+     s=$[$s+$i]
+   done
+
+   echo "$1+...+$2=$s"
+   ```
