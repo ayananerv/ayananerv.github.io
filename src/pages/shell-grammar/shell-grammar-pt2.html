@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewpoint" content="width=device-width" />
+  <!-- from ME -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="/background.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+
+  </header>
+
+  <nav>
+
+  </nav>
+
+  <main>
+    <article>
+      <p>本次更加偏重流程控制：</p>
+      <h2>条件控制</h2>
+      <h3>基本语法</h3>
+      <p><code>[ condition ]</code></p>
+
+      <h3>注意</h3>
+      <p>
+      <ol>
+        <li><code>condition与[]不能相连，其中<strong>有空格</strong>。</code></li>
+        <li><code>条件非空为true,[]返回false。</code></li>
+      </ol>
+      </p>
+
+      <h3>常用判断条件</h3>
+      <p><strong>整数</strong>之间比较：</p>
+      <pre><code>    <strong>-lt</strong> less than
+    <strong>-le</strong> less or equal
+    <strong>-eq</strong> equal
+    <strong>-gt</strong> greater than
+    <strong>-ge</strong> greater or equal
+    <strong>-ne</strong> not equal</code></pre>
+      <p><strong>字符串</strong>之间比较：</p>
+      <pre><code>    <strong>=</strong> equal
+    <strong>!=</strong> not equal</code></pre>
+      <p><strong>文件权限</strong>的判断：</p>
+      <pre><code>    <strong>-r</strong> read
+    <strong>-w</strong> write
+    <strong>-x</strong> execute</code></pre>
+      <p><strong>文件类型</strong>的判断：</p>
+      <pre><code>    <strong>-f</strong> exist a normal file
+    <strong>-e</strong> existence
+    <strong>-d</strong> a directory</code></pre>
+
+      <h3>实例</h3>
+      <ol>
+        <li>
+          <p><code>23</code>是否大于等于<code>22</code>？<br />
+            <code class="language-shell">$ [ 23 -ge 22 ]<br />$ echo $?<br />0</code>
+          </p>
+        </li>
+        <li>
+          <p>判断<code>hello_shell.sh</code>是否具有写权限？<br />
+            <code class="language-shell">$ [ -w hello_shell.sh ]<br />$ echo $?<br />0</code>
+          </p>
+        </li>
+      </ol>
+
+      <h3>多条件判断</h3>
+      <p><code>[ condition1 ] && [ condition2 ] || [ condition3 ]</code></p>
+
+      <hr>
+
+      <h2>if判断</h2>
+      <h3>基本语法</h3>
+      <p>
+      <pre><code>if [ condition ];then
+  # coding here
+fi</code></pre><br />也可以这样写：
+      <pre><code>if [ condition ]
+  then
+    # coding hear
+fi</code></pre>
+      </p>
+
+      <hr>
+
+      <h2>for循环</h2>
+      <h3>基本语法1</h3>
+      <p>
+      <pre><code>for ((初始值;循环控制条件;变量变化))
+do
+  # coding here
+done</code></pre>
+      </p>
+
+      <h4>注意</h4>
+      <code>for</code>与<code>(</code><strong>有空格！！！</strong><br /><code>(</code>与条件之间<strong>没有任何空格字符！！！</strong>
+
+
+      <h3>基本语法2</h3>
+      <p>
+      <pre><code>for var in val1 val2 val3...
+do
+  # coding here
+done</code></pre>
+      </p>
+
+
+      <h3>实例</h3>
+      <ol>
+        <li>
+          <p>计算从1加到100的值</p>
+          <pre><code class="language-shell">#!/bin/bash
+
+  s=0
+  for ((i=1;i<=100;i++))
+  do
+    s=$[$s+$i]
+  done
+
+  echo $s</code></pre>
+        </li>
+        <li>
+          <p>打印所有参数</p>
+          <pre><code class="language-shell">#!/bin/bash
+
+for i in $@
+do
+  echo $i
+done</code></pre>
+        </li>
+      </ol>
+
+      <h4>注意</h4>
+      <p>在2中，<code>$* = $@ != "$*"(as a whole)</code></p>
+
+      <hr>
+
+      <h2>while循环</h2>
+      <h3>基本语法</h3>
+      <p>
+      <pre><code class="language-shell">while [ condition ]
+do
+  # coding here
+done</code></pre>
+      </p>
+
+      <h4>注意</h4>
+      <code>while</code>与<code>[</code>之间<strong>有空格</strong>；并且<code>[</code>与条件之间<strong>同样有空格！！！</strong>
+
+      <h3>实例</h3>
+      <p>计算从1加到100的值</p>
+      <pre><code class="language-shell">#!/bin/bash
+
+s=0
+i=1
+while [ i -le 100 ]
+do
+  s=$(($s+$i))
+  i=$(($i+1))
+done
+
+echo $s</code></pre>
+
+    </article>
+
+    <aside>
+
+    </aside>
+
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>

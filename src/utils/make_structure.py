@@ -9,44 +9,43 @@ class my_structure:
         pass
 
     def __args(self):
-        self.html = """
-        <!DOCTYPE html>
-        <html lang="en-US">
+        self.html = """<!DOCTYPE html>
+<html lang="en-US">
 
-        <head>
-          <meta charset="utf-8" />
-          <meta name="viewpoint" content="width=device-width" />
-          <!-- from ME -->
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-          <link href="/background.css" rel="stylesheet" type="text/css" />
-        </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewpoint" content="width=device-width" />
+  <!-- from ME -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="/background.css" rel="stylesheet" type="text/css" />
+</head>
 
-        <body>
-          <header>
+<body>
+  <header>
 
-          </header>
+  </header>
 
-          <nav>
+  <nav>
 
-          </nav>
+  </nav>
 
-          <main>
-            <article>
+  <main>
+    <article>
 
-            </article>
+    </article>
 
-            <aside>
+    <aside>
 
-            </aside>
+    </aside>
 
-          </main>
+  </main>
 
-          <footer>
+  <footer>
 
-          </footer>
-        </body>
+  </footer>
+</body>
 
-        </html>
+</html>
         """
 
     def make_structure(self):
