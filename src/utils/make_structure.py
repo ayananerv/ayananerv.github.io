@@ -18,16 +18,30 @@ class my_structure:
   <!-- from ME -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link href="/background.css" rel="stylesheet" type="text/css" />
+  <title>give me a title</title>
 </head>
 
 <body>
-  <header>
-
+    <header>
+    <h1>未来在过去之前</h1>
+    <h2>THE FUTURE LIES IN THE PAST OF THE PAST</h2>
   </header>
 
-  <nav>
 
+  <div>
+    <p>想通过这个网站记录一些专业上的知识、自己感兴趣的小说、想法和音乐等。（施工中...）</p>
+  </div>
+
+  <nav>
+    <p>导航栏</p>
+    <ul>
+      <li><a href="hyper-reference">name</a></li>
+    </ul>
   </nav>
+
+  <hr>
+
+
 
   <main>
     <article>

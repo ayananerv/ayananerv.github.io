@@ -12,17 +12,32 @@
 
 <body>
   <header>
-
+    <h1>未来在过去之前</h1>
+    <h2>THE FUTURE LIES IN THE PAST OF THE PAST</h2>
   </header>
 
-  <nav>
 
+  <div>
+    <p>想通过这个网站记录一些专业上的知识、自己感兴趣的小说、想法和音乐等。（施工中...）</p>
+  </div>
+
+  <nav>
+    <p>导航栏</p>
+    <ul>
+      <li><a href="/index.html">主页</a></li>
+      <li><a href="#concon">条件控制</a></li>
+      <li><a href="#ifjg">if判断</a></li>
+      <li><a href="#forloop">for循环</a></li>
+      <li><a href="#whileloop">while循环</a></li>
+    </ul>
   </nav>
+
+  <hr>
 
   <main>
     <article>
       <p>本次更加偏重流程控制：</p>
-      <h2>条件控制</h2>
+      <h2 id="concon">条件控制</h2>
       <h3>基本语法</h3>
       <p><code>[ condition ]</code></p>
 
@@ -73,7 +88,7 @@
 
       <hr>
 
-      <h2>if判断</h2>
+      <h2 id="ifjg">if判断</h2>
       <h3>基本语法</h3>
       <p>
       <pre><code>if [ condition ];then
@@ -87,7 +102,7 @@ fi</code></pre>
 
       <hr>
 
-      <h2>for循环</h2>
+      <h2 id="forloop">for循环</h2>
       <h3>基本语法1</h3>
       <p>
       <pre><code>for ((初始值;循环控制条件;变量变化))
@@ -139,7 +154,7 @@ done</code></pre>
 
       <hr>
 
-      <h2>while循环</h2>
+      <h2 id="whileloop">while循环</h2>
       <h3>基本语法</h3>
       <p>
       <pre><code class="language-shell">while [ condition ]
