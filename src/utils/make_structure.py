@@ -19,6 +19,8 @@ class my_structure:
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link href="/background.css" rel="stylesheet" type="text/css" />
   <title>give me a title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
+
 </head>
 
 <body>
@@ -47,6 +49,26 @@ class my_structure:
 
   <main>
     <article>
+      <div id="markdown-content"></div>
+
+  <script>
+    var markdownURL = 'shortest-path.md';
+
+    // 获取Markdown文件内容
+    fetch(markdownURL)
+      .then(response => response.text())
+      .then(markdownContent => {
+        // 将Markdown转换为HTML
+        var htmlContent = marked.parse(markdownContent);
+
+        // 将HTML内容插入到指定的元素中
+        document.getElementById('markdown-content').innerHTML = htmlContent;
+      })
+      .catch(error => {
+        console.error('Error fetching Markdown file:', error);
+      });
+  </script>
+
 
     </article>
 
@@ -69,7 +91,7 @@ class my_structure:
 
     def make_structure(self):
         try:
-            with open(self.html_name, "w") as f:
+            with open(self.html_name, "w", encoding=self.encoding) as f:
                 f.write(self.html)
         except Exception as e:
             print("<Error>", e)
