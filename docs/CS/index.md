@@ -1,3 +1,5 @@
+# Thread Pool Cpp
+
 项目来源：<https://github.com/progschj/ThreadPool>
 
 项目简介：一个利用c++11标准，全平台通用的线程池简单实现
@@ -11,7 +13,8 @@
 > 本项目只包含最简单的多线程并发，不涉及异步计时器等内容
 
 <!-- ![](/src/assets/images/thread-pool.png) -->
-<img src=/src/assets/images/thread-pool.png width=50%>
+<!-- <img src=CS/assets/thread-pool.png width=50%> -->
+![](assets/thread-pool.png)
 
 ### 什么是多线程
 
@@ -24,7 +27,8 @@
 面对这种情况，一个有效的解决方式就是将服务器调整为**非线性结构**；或者简单一点说，将服务器程序变成**多条线性的结构**
 
 <!-- ![](/src/assets/images/threads.jpg) -->
-<img src=/src/assets/images/threads.jpg width=50%>
+<!-- <img src=assets/threads.jpg width=50%> -->
+![](assets/threads.jpg)
 
 对于多条线性的结构的程序——多线程的程序，我们可以想象每一个线程都有各自的起点和终点，他们共享同样的数据但是各自同时对数据进行独自的加工
 
