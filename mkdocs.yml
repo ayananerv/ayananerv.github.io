@@ -7,7 +7,7 @@ site_description: >-
 repo_name: ayananerv/ayananerv.github.io
 repo_url: https://github.com/ayananerv/ayananerv.github.io.git
 
-copyright: Copyright &copy; 2023 LiJZ. All rights reserved
+copyright: Copyright &copy; 2023 - 2024 LiJZ. All rights reserved
 
 theme:
   name: material
