@@ -137,5 +137,9 @@ nav:
 
   - 数学:
       - 群论:
-          - "GroupTheory/gt_pt1_intro.md"
-          - "GroupTheory/gt_pt2_basic.md"
+          - "GroupTheory/group_theory_pt1.md"
+
+      - 数论:
+          - "NumberTheory/primary_number_theory_pt1.md"
+          - "NumberTheory/primary_number_theory_pt2.md"
+          - "NumberTheory/primary_number_theory_pt3.md"
